@@ -26,19 +26,14 @@ CSS: For styling the application to create a professional look and feel.
 🚀 How to Run
 Prerequisites:
 
-Java Runtime Environment (JRE) 21 or later.
+Java Runtime Environment (JRE) 21 or later installed on your system.
 
-JavaFX SDK 21 or later.
+Go to the Releases section of this repository.
 
-Clone the repository:
+Download both the SmartFileOrganizer.jar and the run.bat files from the latest release.
 
-git clone https://github.com/your-username/SmartFileOrganizer.git
+Place both files in the same folder on your computer.
 
-Navigate to the project directory:
+Double-click run.bat to start the application.
 
-cd SmartFileOrganizer
-
-Run the application:
-(You will need to provide the path to your JavaFX SDK's lib folder)
-
-java --module-path /path/to/your/javafx-sdk-21/lib --add-modules javafx.controls,javafx.fxml -jar SmartFileOrganizer.jar
+(Note: The run.bat script assumes your JavaFX SDK is located at C:\Program Files\Java\openjfx-21.0.8_windows-x64_bin-sdk. If you have it in a different location, you will need to right-click and edit the run.bat file to update the path.)

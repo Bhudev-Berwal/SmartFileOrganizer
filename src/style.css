@@ -1,0 +1,93 @@
+/* --- Main Window & Font --- */
+.root {
+    -fx-background-color: #1E1E24;
+    -fx-font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* --- Header Bar --- */
+.header {
+    -fx-padding: 15px 20px;
+    -fx-alignment: center-left;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F0F0F0;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    -fx-alignment: top-center;
+    -fx-padding: 20px 30px; /* Adjusted padding */
+    -fx-spacing: 30px;
+}
+
+/* --- Top Section (Icon & Button) --- */
+.top-section {
+    -fx-alignment: center;
+    -fx-spacing: 25px;
+    -fx-padding: 20px 0 0 0; /* Added padding to push it down slightly */
+}
+
+.button {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px 0; /* Use padding and max-width for consistent size */
+    -fx-max-width: 350px; /* Control button width */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 10, 0.4, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* --- "Recently Organized" List --- */
+.list-header-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A0A0A0;
+    -fx-padding: 0 0 10px 5px;
+}
+
+/* --- NEW: Fix for the white background --- */
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 12px 5px; /* Increased padding for more space */
+}
+/* --- End of Fix --- */
+
+.list-item-box {
+    -fx-alignment: center-left;
+    -fx-spacing: 15px;
+}
+
+.list-item-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F0F0F0;
+}
+
+.list-item-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #808080;
+}
+
+.list-item-count-box {
+    -fx-alignment: center-left;
+    -fx-spacing: 5px;
+}
+
+.list-item-count-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #22C55E;
+}

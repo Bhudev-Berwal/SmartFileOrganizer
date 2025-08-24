@@ -32,7 +32,7 @@ JavaFX SDK 21 or later.
 
 Clone the repository:
 
-git clone https://github.com/your-username/SmartFileOrganizer.git
+git clone https://github.com/Bhudev-Berwal/SmartFileOrganizer.git
 
 Navigate to the project directory:
 

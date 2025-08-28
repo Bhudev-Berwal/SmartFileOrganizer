@@ -23,6 +23,9 @@ A modern, intuitive desktop application built with Java and JavaFX that automati
 
 ## 🚀 How to Install and Run
 
+--tried creating exe file but the app fails to run due to undefied error although we need jdk and other setup to run this application without exe file installation
+
+
 1.  Go to the [**Releases**](https://github.com/Bhudev-Berwal/SmartFileOrganizer/releases) section of this repository.
 2.  Download the `SmartFileOrganizer-1.0.exe` installer from the latest release.
 3.  Run the installer and follow the on-screen instructions. The application will be added to your Start Menu and Desktop.

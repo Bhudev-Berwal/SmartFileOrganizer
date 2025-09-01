@@ -19,7 +19,7 @@
 /* --- Main Content Area --- */
 .main-content {
     -fx-alignment: top-center;
-    -fx-padding: 20px 30px; /* Adjusted padding */
+    -fx-padding: 20px 30px;
     -fx-spacing: 30px;
 }
 
@@ -27,7 +27,7 @@
 .top-section {
     -fx-alignment: center;
     -fx-spacing: 25px;
-    -fx-padding: 20px 0 0 0; /* Added padding to push it down slightly */
+    -fx-padding: 20px 0 0 0;
 }
 
 .button {
@@ -36,8 +36,8 @@
     -fx-font-size: 18px;
     -fx-font-weight: bold;
     -fx-background-radius: 12px;
-    -fx-padding: 15px 0; /* Use padding and max-width for consistent size */
-    -fx-max-width: 350px; /* Control button width */
+    -fx-padding: 15px 0;
+    -fx-max-width: 350px;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 10, 0.4, 0, 3);
 }
@@ -54,20 +54,17 @@
     -fx-padding: 0 0 10px 5px;
 }
 
-/* --- NEW: Fix for the white background --- */
 .list-view {
     -fx-background-color: transparent;
 }
 
 .list-cell {
     -fx-background-color: transparent;
-    -fx-padding: 12px 5px; /* Increased padding for more space */
+    -fx-padding: 12px 5px;
 }
-/* --- End of Fix --- */
 
-.list-item-box {
-    -fx-alignment: center-left;
-    -fx-spacing: 15px;
+.list-view .label {
+    -fx-text-fill: #808080;
 }
 
 .list-item-title {
@@ -79,11 +76,6 @@
 .list-item-subtitle {
     -fx-font-size: 12px;
     -fx-text-fill: #808080;
-}
-
-.list-item-count-box {
-    -fx-alignment: center-left;
-    -fx-spacing: 5px;
 }
 
 .list-item-count-text {

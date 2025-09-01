@@ -1,39 +1,75 @@
 Smart File Organizer
-A modern, intuitive desktop application built with Java and JavaFX that automatically organizes files in any folder based on a set of predefined rules. This tool helps keep your digital workspace tidy by moving files like PDFs, images, and installers into designated subfolders.
+A modern, intuitive desktop application built with Java and JavaFX that automatically organizes files into clean, categorized subfolders. This project was built from the ground up, focusing on a user-friendly experience, a polished visual design, and robust functionality.
 
-Note: You will need to take a screenshot of your final application and replace the URL above.
+(Note: This is a sample screenshot. You should take a high-quality screenshot of your final running application, upload it to a site like Imgur, and replace the URL above with your own.)
 
 ✨ Features
-Intuitive UI: A clean, modern user interface designed for ease of use.
+Beautiful, Modern UI: A clean and professional user interface designed with JavaFX and styled with custom CSS to provide an excellent user experience.
 
-Select & Go: Simply select any folder on your computer to start the organization process.
+In-Place Organization: Select any folder (like your "Downloads" folder), and the application will create categorized subfolders (PDFs, Images, Documents, etc.) directly within it.
 
-In-Place Organization: Creates organized subfolders (PDFs, Images, Documents, etc.) directly within the folder you select.
+Real-Time Feedback: A progress window appears during the organization process, giving you confidence that the application is working.
 
-Real-Time Feedback: A progress window appears during operation, letting you know the process is working.
+Automatic Navigation: Once the organization is complete, the application automatically opens the folder for you to immediately see the results.
 
-Automatic Navigation: Once complete, the application automatically opens the organized folder for you to view the results.
+Activity History: The "Recently Organized" list updates in real-time, providing a history of the folders you've organized and how many files were moved.
 
-Recent History: The app keeps a running list of the folders you've recently organized for quick reference.
+🛠️ Technologies & Tools Used
+Core: Java 21
 
-🛠️ Built With
-Java: Core application logic.
+User Interface: JavaFX
 
-JavaFX: For the modern graphical user interface.
+Styling: CSS 3
 
-CSS: For styling the application to create a professional look and feel.
+Version Control: Git & GitHub
 
-🚀 How to Run
-Prerequisites:
+IDE: Visual Studio Code
 
-Java Runtime Environment (JRE) 21 or later installed on your system.
+🚀 How to Run from Source Code
+To run this project, you'll need to have the following installed on your system:
 
-Go to the Releases section of this repository.
+Java Development Kit (JDK) 21 or higher
 
-Download both the SmartFileOrganizer.jar and the run.bat files from the latest release.
+JavaFX SDK 21 or higher
 
-Place both files in the same folder on your computer.
+Visual Studio Code with the Extension Pack for Java
 
-Double-click run.bat to start the application.
+Step-by-Step Instructions
+Clone the Repository:
 
-(Note: The run.bat script assumes your JavaFX SDK is located at C:\Program Files\Java\openjfx-21.0.8_windows-x64_bin-sdk. If you have it in a different location, you will need to right-click and edit the run.bat file to update the path.)
+git clone [https://github.com/Bhudev-Berwal/SmartFileOrganizer.git](https://github.com/Bhudev-Berwal/SmartFileOrganizer.git)
+cd SmartFileOrganizer
+
+
+Configure VS Code:
+
+Link JavaFX: Open the Command Palette (Ctrl+Shift+P), find Java: Configure Classpath, and under "Referenced Libraries," add all the .jar files from your JavaFX SDK's lib folder.
+
+Configure the Runner: Create a .vscode/launch.json file and add the following configuration. Crucially, update the --module-path to point to the exact location of your JavaFX SDK's lib folder.
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Smart File Organizer",
+            "request": "launch",
+            "mainClass": "GuiApp",
+            "projectName": "SmartFileOrganizer",
+            "vmArgs": "--module-path \"C:/Path/To/Your/javafx-sdk-21/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
+
+Run the Application:
+
+Open the Run and Debug view in VS Code.
+
+Select "Launch Smart File Organizer" from the dropdown and click the green play button.
+
+Future Enhancements
+Persistent History: Save the "Recently Organized" list to a file so it persists between application launches.
+
+Customizable Rules: Allow users to create, edit, and delete their own organization rules directly from the UI.
+
+Create a Native Installer: Package the application using jpackage to create a distributable .exe for Windows, removing the need for users to have Java or JavaFX installed.

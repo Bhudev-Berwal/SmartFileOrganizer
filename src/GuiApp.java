@@ -15,7 +15,6 @@ import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -126,7 +125,6 @@ public class GuiApp extends Application {
             String date = new SimpleDateFormat("MMM dd, yyyy").format(new Date());
             recentFoldersList.add(0, new FolderItem(sourceDirectory.getName(), "Organized " + date, String.valueOf(filesMoved), true));
             
-            // --- CHANGE: Now opens the folder that was just organized ---
             try {
                 Desktop.getDesktop().open(sourceDirectory);
             } catch (IOException ioException) {
@@ -138,7 +136,6 @@ public class GuiApp extends Application {
     }
 
     private int organizeFiles(File sourceFolder) {
-        // --- CHANGE: The destination path is now based on the source folder ---
         String basePath = sourceFolder.getAbsolutePath();
         List<Rule> rules = new ArrayList<>();
         rules.add(new Rule(".pdf", basePath + "/PDFs"));
@@ -147,10 +144,8 @@ public class GuiApp extends Application {
         rules.add(new Rule(".zip", basePath + "/Archives"));
         rules.add(new Rule(".exe", basePath + "/Installers"));
         rules.add(new Rule(".docx", basePath + "/Documents"));
-        rules.add(new Rule(".pptx", basePath + "/Presentations"));
         rules.add(new Rule(".mp4", basePath + "/Videos"));
-
-
+        rules.add(new Rule(".pptx", basePath + "/Presentations"));
 
         File[] files = sourceFolder.listFiles();
         if (files == null) return 0;
@@ -166,7 +161,7 @@ public class GuiApp extends Application {
                             Files.move(file.toPath(), destDir.resolve(file.getName()));
                             filesMoved++;
                         } catch (IOException ex) {
-                            // Error handling
+                            // Error handling can be improved here
                         }
                         break;
                     }
